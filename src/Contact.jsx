@@ -2,42 +2,29 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { FaYoutube } from "react-icons/fa6";
 
-const ConnectContact = () => {
+const Contact = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center text-gray-800 p-8 relative"
+      className="flex flex-col items-center justify-center text-gray-800 p-8"
       style={{
-        background: "linear-gradient(135deg, #c1aef5, #5c25f7)",
+        background: "linear-gradient(0deg, #D690FF, #BB16F2)", // Example colors
         minHeight: "100vh",
         overflow: "hidden",
       }}
     >
-      {/* SVG Background Design */}
-      <img
-        src="/beauty.svg"
-        alt="Decorative Design"
-        className="absolute top-0 right-0 w-[35%] opacity-20"
-      />
-      <img
-        src="/beauty.svg"
-        alt="Decorative Design"
-        className="absolute bottom-0 left-0 w-[35%] opacity-20"
-      />
-
-      {/* Header */}
-      <div className="text-white font-bold tracking-wider text-5xl sm:text-6xl lg:text-[7rem] mb-10 text-center z-10">
+      <div className="text-white font-extrabold tracking-wider text-5xl sm:text-6xl lg:text-[7rem] mb-12 text-center z-10 bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
         Contact Me
       </div>
 
-      {/* Main Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full lg:gap-12 z-10">
+      {/* Form and SVG Section */}
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full lg:gap-12 z-10">
         {/* Form Section */}
-        <div className="w-full max-w-md bg-white shadow-lg rounded-3xl p-6">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+        <div className="w-full h-auto lg:w-1/2 max-w-md bg-white shadow-2xl rounded-3xl p-8">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
             Get in Touch
           </h2>
           <form
@@ -45,23 +32,27 @@ const ConnectContact = () => {
             method="POST"
             className="space-y-6"
           >
-            {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-                Full name*
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-semibold mb-2"
+              >
+                Full Name*
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Enter your name..."
-                className="w-full px-4 py-2 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-md"
+                required
               />
             </div>
-
-            {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-semibold mb-2"
+              >
                 Email*
               </label>
               <input
@@ -69,13 +60,15 @@ const ConnectContact = () => {
                 id="email"
                 name="email"
                 placeholder="Enter your email..."
-                className="w-full px-4 py-2 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-md"
+                required
               />
             </div>
-
-            {/* Message Field */}
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+              <label
+                htmlFor="message"
+                className="block text-gray-700 font-semibold mb-2"
+              >
                 Message*
               </label>
               <textarea
@@ -83,70 +76,95 @@ const ConnectContact = () => {
                 name="message"
                 rows="4"
                 placeholder="Enter your message..."
-                className="w-full px-4 py-2 bg-gray-100 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-md"
+                required
               ></textarea>
             </div>
-
-            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-full hover:bg-blue-800 transition duration-300"
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               Send Message
             </button>
           </form>
         </div>
 
-        {/* Connect Section */}
-        <div className="flex flex-col items-center lg:w-1/3 mt-12 lg:mt-0">
-          <h2 className="text-3xl font-semibold text-white mb-6 text-center">
-            Let's Connect
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <a href="" className="text-gray-200 hover:text-blue-600">
-              <FaLinkedin className="text-4xl" />
-            </a>
-            <a href="" className="text-gray-200 hover:text-pink-500">
-              <AiFillInstagram className="text-4xl" />
-            </a>
-            <a href="" className="text-gray-200 hover:text-blue-400">
-              <FaSquareXTwitter className="text-4xl" />
-            </a>
-            <a href="" className="text-gray-200 hover:text-red-500">
-              <MdEmail className="text-4xl" />
-            </a>
-            <a href="" className="text-gray-200 hover:text-black">
-              <FaGithubSquare className="text-4xl" />
-            </a>
-            <a href="" className="text-gray-200 hover:text-orange-500">
-              <SiLeetcode className="text-4xl" />
-            </a>
-          </div>
-
-          <h3 className="text-2xl font-semibold text-white mb-4">Profiles</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="/home" className="text-gray-200 hover:underline">
-              Home
-            </a>
-            <a href="/projects" className="text-gray-200 hover:underline">
-              Projects
-            </a>
-            <a href="/blog" className="text-gray-200 hover:underline">
-              Blog
-            </a>
-            <a href="/contact" className="text-gray-200 hover:underline">
-              Contact
-            </a>
-          </div>
+        {/* SVG Section */}
+        <div className="hidden lg:block flex justify-center lg:w-1/2 mt-10 lg:mt-0">
+          <img
+            src="/beauty.svg"
+            alt="Decorative Design"
+            className="w-full sm:w-3/4 lg:w-full max-w-md"
+          />
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="text-center mt-12 text-white z-10">
+      {/* Social Links Section */}
+      <div className="flex flex-col items-center mt-16 w-full bg-gradient-to-r from-white to-slate-50 p-10 rounded-3xl shadow-xl">
+        <h2 className="sm:text-5xl  text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 mb-8 text-center">
+          Let's Connect
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-8 mb-10">
+          {[
+            {
+              href: "https://www.linkedin.com/in/shivanshu-tripathi-704a022b9/",
+              icon: <FaLinkedin />,
+              color: "text-blue-500",
+            },
+            {
+              href: "https://www.instagram.com/zz_shivanshu95/",
+              icon: <AiFillInstagram />,
+              color: "text-pink-600",
+            },
+            {
+              href: "https://x.com/T_shivanshu9590",
+              icon: <FaSquareXTwitter />,
+              color: "text-black",
+            },
+            {
+              href: "https://github.com/fieldmarcel",
+              icon: <FaGithubSquare />,
+              color: "text-gray-800",
+            },
+            {
+              href: "https://leetcode.com/u/Shivanshu-Tripathi/",
+              icon: <SiLeetcode />,
+              color: "text-yellow-500",
+            },
+            {
+              href: "https://www.youtube.com/@Shiva_Vox",
+              icon: <FaYoutube />,
+              color: "text-red-500",
+            },
+          ].map(({ href, icon, color }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-transform transform hover:scale-125 ${color} text-5xl`}
+              aria-label="Social Link"
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="/resume.pdf"
+          download
+          className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
+        >
+          Download Resume
+        </a>
+      </div>
+
+      <div className="text-center text-sm text-gray-700 mt-10">
         <p>©2024 Shivanshu Tripathi. All rights reserved.</p>
       </div>
     </div>
   );
 };
 
-export default ConnectContact;
+export default Contact;

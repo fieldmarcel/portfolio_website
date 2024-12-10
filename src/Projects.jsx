@@ -1,15 +1,8 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-import  { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 
 const Projects = () => {
-  const dragConstraints = { left: 100, right: 300, top: 100, bottom: 200 };
-  
-
   const data = [
     {
       id: "1",
@@ -54,57 +47,59 @@ const Projects = () => {
   ];
 
   return (
-    <div  
-      className="flex flex-col items-start p-6 bg-gray-100">
+    <div className="flex flex-col items-start inset-0 h-full w-full bg-[linear-gradient(to_right,#E3D8EA_1px,transparent_2px),linear-gradient(to_bottom,#E3D8EA_1px,transparent_1px)] bg-[size:6rem_4rem] p-6 sm:p-10"  >
       {/* Header */}
-      <h1 className="text-4xl sm:text-5xl lg:text-7xl h-10 font-bold mb-8 tracking-wider">
-        <span className="font-thin ml-6 mb-6">|</span> Web Folio
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-wider text-gray-800">
+        <span className=" sm:ml-9 font-thin text-purple-600">|</span> Web Folio
       </h1>
+      <h2 className="text-lg sm:ml-9  sm:text-xl lg:text-2xl font-medium text-gray-600 mb-8">
+        Showcasing some of my recent projects and achievements.
+      </h2>
 
       {/* Projects Grid */}
-      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-12  m-4 mx-2 sm:mx-8">
+      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:m-10 gap-6 sm:gap-8">
         {data.map((project) => (
           <div
             key={project.id}
-            className="bg-white rounded-lg hover:shadow-lg p-4 sm:p-6 transform hover:scale-105 transition duration-300 relative"
+            className="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
           >
-            {/* Project Image with Overlay */}
+            {/* Project Image */}
             <motion.div className="relative group">
               <motion.img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-64 sm:h-64 lg:h-96 rounded-lg mb-4 object-fill hover:scale-105 transform transition duration-300"
+                className="w-full h-48 sm:h-64 lg:h-72 object-contain group-hover:brightness-90 transition duration-300"
               />
               {/* Overlay with Live Demo */}
-              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
+              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
                 <a
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black font-bold text-lg sm:text-xl bg-white px-4 py-2 rounded-full hover:bg-gray-700"
+                  className="text-white bg-purple-600 px-4 py-2 rounded-full text-sm sm:text-base hover:bg-purple-700"
                 >
-                  <GoArrowUpRight className="w-8 h-8" />
+                  Live Demo <GoArrowUpRight className="inline ml-1" />
                 </a>
               </div>
             </motion.div>
 
             {/* Project Details */}
-            <div>
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">
+            <div className="p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                 {project.name}
-              </h2>
+              </h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
                 {project.detail}
               </p>
-              <p className="text-sm sm:text-base font-bold text-primary mb-2">
+              <p className="text-xs sm:text-sm font-medium text-purple-500 mb-4">
                 {project.techstack}
               </p>
-              <div className="flex gap-2 items-center justify-end">
+              <div className="flex gap-3">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-purple-600 px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-purple-700 text-sm sm:text-base font-medium"
+                  className="text-white bg-gray-800 px-3 py-1 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm hover:bg-gray-700"
                 >
                   GitHub
                 </a>
@@ -112,7 +107,7 @@ const Projects = () => {
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white bg-purple-500 px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-purple-600 text-sm sm:text-base font-medium"
+                  className="text-white bg-purple-600 px-3 py-1 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm hover:bg-purple-700"
                 >
                   Live Demo
                 </a>

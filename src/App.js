@@ -1,4 +1,4 @@
-import "./App.css";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
@@ -6,35 +6,37 @@ import About from "./About";
 import Projects from "./Projects";
 import Techstack from "./Techstack";
 import Contact from "./Contact";
-// import Connect from "./Connect";
-// import Gsap from "./Gsap";
+import Blog from "./Blog"; // Import Blog
+import Layout from "./Layout";
+// import Cursor from "./Cursor";
 function App() {
-  // console.log(Gsap);
+  const [isopen, setisopen] = useState(false); // State for navigation
+
   return (
     <div className="App">
-      
       <BrowserRouter>
-        <Nav />
+        <Nav isopen={isopen} setisopen={setisopen} />
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Home />
+                <Home isopen={isopen} />
                 <About />
-                <Techstack/>
-                <Projects/>
-                {/* <Connect/> */}
-                <Contact/>
-                {/* <Gsap  />; */}
-                
+                <Techstack />
+                <Projects />
+                <Contact />
+                {/* <Cursor/> */}
               </>
             }
           />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          {/* <Route path="/gsap" element={<Gsap />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} /> {/* Blog route */}
+          <Route path="/layout" element={<Layout />} />
+           {/* <Route path="/cursor" element={<Cursor />} />  */}
 
         </Routes>
       </BrowserRouter>
