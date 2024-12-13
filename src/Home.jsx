@@ -121,8 +121,8 @@ const Home = ({ isopen }) => {
           initial="hidden"
           animate="visible"
         >
-          I have experience of 1 year working on useful and mindful products
-          <br /> together with startups and known brands.
+          I have been developing web apps since 1 year as well as working on <br/>useful and mindful products
+          
         </motion.p>
 
         {/* Button */}
