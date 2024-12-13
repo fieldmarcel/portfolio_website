@@ -78,16 +78,16 @@ const About = () => {
         <div className="w-10 h-10 sm:h-16 sm:w-16 rounded-full flex items-center justify-center sm:mb-4 ">
           <img src="Untitled (3).svg" alt="Icon" />
         </div>
-        <h1 className="text-2xl md:text-4xl font-semibold tracking-wide text-primary sm:mb-3 text-center">
+        <h1 className="text-2xl md:text-4xl mb-2 font-semibold tracking-wide text-primary sm:mb-3 text-center">
           Key Highlights
         </h1>
-        <ul className="text-body text-sm sm:text-base text-center sm:mb-6 mb-3 list-disc ml-2">
+        <ul className="text-body  text-sm sm:text-base text-center sm:mb-6 mb-3 list-disc ml-2">
           <li>Proficient in Full-Stack Development</li>
           <li>Experience with MERN stack projects</li>
           <li>Created 10+ dynamic, user-focused applications</li>
           <li>Skilled in C++, JavaScript, React, and Node.js</li>
         </ul>
-        <div className="w-44 sm:w-64 h-44 sm:h-64">
+        <div className="w-48 sm:w-64 h-48 sm:h-64">
           <img
             src="/img1.jpg"
             alt="Skillset Illustration"

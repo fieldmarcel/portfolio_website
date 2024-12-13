@@ -68,7 +68,7 @@ const Home = ({ isopen }) => {
 
           <div className="sm:w-24 sm:h-20 w-20 h-16 rounded-full overflow-hidden border-black shadow-lg shadow-stone-700 transform translate-x-2 translate-y-3 border-4">
             <Carousel
-              className={`${isopen ? "opacity-0" : "opacity-100"} sm:opacity-100`}
+              className={`${isopen ? "opacity-100" : "opacity-100"} sm:opacity-100`}
               autoPlay={true}
               showArrows={false}
               showIndicators={false}
@@ -86,7 +86,7 @@ const Home = ({ isopen }) => {
                     src={image}
                     alt={`carousel-image-${index}`}
                     className={`  w-full h-full object-cover object-center ${
-                      isopen ? "opacity-0" : "opacity-100"
+                      isopen ? "opacity-100" : "opacity-100"
                     } sm:opacity-100`}
                   />
                 </div>

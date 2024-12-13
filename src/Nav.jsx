@@ -1,37 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { RxTextAlignRight, RxCross2 } from "react-icons/rx";
 import Navlist from "./Navlist";
 import { Link } from "react-router-dom";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 const Nav = ({ isopen, setisopen }) => {
+  const navRef = useRef(null); // Ref for the navigation container
+
   const handleNav = () => {
     setisopen(!isopen);
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", () => {
-      setisopen(false);
-    });
+    const handleOutsideClick = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setisopen(false); // Close the navigation menu if clicked outside
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
   }, [setisopen]);
 
   return (
     <div>
       <div className="flex flex-row justify-between items-center p-4 text-white">
-        <div className="nav  rounded-full flex justify-center sm:ml-10 items-center text-purple-800 sm:text-4xl text-xl sm:w-1/4 sm:h-14 h-10 p-2 ">
+        <div className="nav rounded-full flex justify-center sm:ml-10 items-center text-purple-800 sm:text-4xl text-xl sm:w-1/4 sm:h-14 h-10 p-2">
           Shivanshu Tripathi
         </div>
-        <div className="flex flex-row  items-center">
+        <div className="flex flex-row items-center">
           <Link
             to="/blog"
-            className="flex items-center justify-between bg-black rounded-full overflow-hidden sm:ml-10 mx-1  sm:h-10 h-8"
+            className="flex items-center justify-between bg-black rounded-full overflow-hidden sm:ml-10 mx-1 sm:h-10 h-8"
           >
             {/* Text */}
-            <span className="text-white sm:text-xl  px-2 text-md font-thin">
+            <span className="text-white sm:text-xl px-2 text-md font-thin">
               BLOG
             </span>
             {/* Icon */}
-            <div className="bg-white hover:bg-purple-500 hover:text-white flex items-center justify-center rounded-full sm:w-8 sm:h-8 w-6 h-6  mr-1 ">
+            <div className="bg-white hover:bg-purple-500 hover:text-white flex items-center justify-center rounded-full sm:w-8 sm:h-8 w-6 h-6 mr-1">
               <HiArrowUpRight className="text-black hover:text-white sm:text-lg text-sm" />
             </div>
           </Link>
@@ -44,7 +54,8 @@ const Nav = ({ isopen, setisopen }) => {
           </button>
         </div>
         <div
-          className={`fixed sm:top-20 right-4 sm:right-36 sm:w-80 transition-opacity duration-300 ${
+          ref={navRef} // Attach ref to the navigation menu container
+          className={`fixed sm:top-20 right-2 top-20 sm:right-36 sm:w-80 w-40 transition-opacity duration-300 ${
             isopen ? "opacity-100" : "opacity-0"
           }`}
         >
