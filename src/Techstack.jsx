@@ -70,7 +70,7 @@ const Techstack = () => {
       : "h-screen "
   }max-h-[100vh] overflow-y-auto`}
   style={{
-    backgroundImage: window.innerWidth >= 1024 ? `url('/Group.svg')` : "",  // Corrected path
+    backgroundImage: window.innerWidth >= 1000 ? `url('/bg.svg')` : "", 
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "bottom",
