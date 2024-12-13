@@ -6,9 +6,9 @@ import About from "./About";
 import Projects from "./Projects";
 import Techstack from "./Techstack";
 import Contact from "./Contact";
-import Blog from "./Blog"; // Import Blog
+import Blog from "./Blog"; 
 import Layout from "./Layout";
-// import Cursor from "./Cursor";
+
 function App() {
   const [isopen, setisopen] = useState(false); // State for navigation
 
@@ -26,7 +26,6 @@ function App() {
                 <Techstack />
                 <Projects />
                 <Contact />
-                {/* <Cursor/> */}
               </>
             }
           />
@@ -36,8 +35,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} /> {/* Blog route */}
           <Route path="/layout" element={<Layout />} />
-           {/* <Route path="/cursor" element={<Cursor />} />  */}
-
         </Routes>
       </BrowserRouter>
     </div>

@@ -11,9 +11,9 @@ export default function Framer() {
   });
 
   return (
-    <div className="  relative w-screen h-screen overflow-hidden ">
+    <div className="  relative w-[98.9vw] h-screen overflow-hidden ">
       <div
-        className="  absolute top-1/3 -translate-y-1 tracking-widest font-extrabold text-6xl sm:text-9xl whitespace-nowrap opacity-20 text-gray-700 font-bold"
+        className="  absolute top-1/3 -translate-y-1 tracking-widest from-neutral-400 to-slate-600 text-6xl font-extrabold sm:text-9xl whitespace-nowrap opacity-20 text-gray-700 "
         style={{ willChange: "transform" }}
         ref={ref}
       >

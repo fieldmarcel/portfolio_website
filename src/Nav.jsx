@@ -1,41 +1,55 @@
 import React, { useEffect } from "react";
 import { RxTextAlignRight, RxCross2 } from "react-icons/rx";
 import Navlist from "./Navlist";
+import { Link } from "react-router-dom";
+import { HiArrowUpRight } from "react-icons/hi2";
+
 const Nav = ({ isopen, setisopen }) => {
   const handleNav = () => {
-    setisopen(!isopen); // Correctly toggles navigation state
+    setisopen(!isopen);
   };
-useEffect(() => {
-  
 
-    document.addEventListener('mousedown',()=>{
-setisopen(false);
-    }
-    )
-})
+  useEffect(() => {
+    document.addEventListener("mousedown", () => {
+      setisopen(false);
+    });
+  }, [setisopen]);
 
   return (
-    <div >
+    <div>
       <div className="flex flex-row justify-between items-center p-4 text-white">
-        <div className=" nav bg-white rounded-full flex justify-center sm:ml-10 items-center text-purple-800 sm:text-4xl sm:w-1/4 sm:h-14 h-10 p-2 ">
-       Shivanshu Tripathi  
+        <div className="nav  rounded-full flex justify-center sm:ml-10 items-center text-purple-800 sm:text-4xl text-xl sm:w-1/4 sm:h-14 h-10 p-2 ">
+          Shivanshu Tripathi
         </div>
-
-        <button
-          type="button"
-          onClick={handleNav}
-          className="bg-white sm:mr-32 rounded-full flex justify-center items-center text-gray-700 sm:w-16 sm:h-14 p-2"
+        <div className="flex flex-row  items-center">
+          <Link
+            to="/blog"
+            className="flex items-center justify-between bg-black rounded-full overflow-hidden sm:ml-10 mx-1  sm:h-10 h-8"
+          >
+            {/* Text */}
+            <span className="text-white sm:text-xl  px-2 text-md font-thin">
+              BLOG
+            </span>
+            {/* Icon */}
+            <div className="bg-white hover:bg-purple-500 hover:text-white flex items-center justify-center rounded-full sm:w-8 sm:h-8 w-6 h-6  mr-1 ">
+              <HiArrowUpRight className="text-black hover:text-white sm:text-lg text-sm" />
+            </div>
+          </Link>
+          <button
+            type="button"
+            onClick={handleNav}
+            className="bg-white sm:mr-32 rounded-full flex justify-center items-center text-gray-700 sm:w-16 sm:h-14 p-2"
+          >
+            {isopen ? <RxCross2 size={24} /> : <RxTextAlignRight size={24} />}
+          </button>
+        </div>
+        <div
+          className={`fixed sm:top-20 right-4 sm:right-36 sm:w-80 transition-opacity duration-300 ${
+            isopen ? "opacity-100" : "opacity-0"
+          }`}
         >
-          {isopen ? <RxCross2 size={24} /> : <RxTextAlignRight size={24} />}
-        </button>
-      </div>
-
-      <div
-        className={`fixed sm:top-20 right-4 sm:right-36  sm:w-80 transition-opacity duration-300 ${
-          isopen ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Navlist />
+          <Navlist />
+        </div>
       </div>
     </div>
   );

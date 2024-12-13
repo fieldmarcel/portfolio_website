@@ -1,8 +1,19 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { motion } from "framer-motion";
-
+import { motion, useInView } from "framer-motion";
+import  {useRef}  from "react";
 const Projects = () => {
+  const container= (delay)=>({
+    hidden:{y:100, opacity:0},
+    visible:{y:0, opacity:1,
+      transition:{
+        duration:1.5,delay:delay
+      },
+    },
+    
+    });
+    const refLeft = useRef(null);
+    const isLeftInView = useInView(refLeft);
   const data = [
     {
       id: "1",
@@ -19,30 +30,31 @@ const Projects = () => {
       name: "Ecommerce",
       detail:
         "FitnessPro is a comprehensive fitness management platform that tracks your workouts, offers diet suggestions, and helps you stay motivated with progress charts and community support.",
-      image: "fight5.svg",
+      image: "Group 1 (1).svg",
       techstack: "#reactjs #tailwind #api #nodejs",
       github: "https://github.com/fieldmarcel/ecommerce",
-      liveDemo: "https://fitnesspro-demo.com",
+      liveDemo: "https://ecommerce-xi-lovat.vercel.app",
     },
     {
       id: "3",
-      name: "PexelsAPI",
+      name: "Portfolio App",
       detail:
         "EcoLiving is a platform sharing sustainable living tips, DIY projects, and eco-friendly product recommendations to promote a greener lifestyle.",
-      image: "fight5.svg",
-      techstack: "#mernstack #tailwind #reactjs",
+      image: "G2.svg",
+      techstack: "#tailwind #reactjs #framer",
       github: "https://github.com/fieldmarcel/Pexels--API",
       liveDemo: "https://ecoliving-demo.com",
     },
+
     {
       id: "4",
       name: "Recipeapp",
       detail:
-        "Newsify is a news aggregation platform delivering trending headlines, weather updates, and personalized content based on user preferences.",
-      image: "fight5.svg",
+        "Recipe is a recipe aggregation platform delivering trending headlines, weather updates, and personalized content based on user preferences.",
+      image: "Group 1 (2).svg",
       techstack: "#mernstack #api #tailwind #reactjs",
-      github: "https://github.com/username/newsify",
-      liveDemo: "https://newsify-demo.com",
+      github: "https://github.com/fieldmarcel/foodchef",
+      liveDemo: "https://foodchef-pi.vercel.app/",
     },
   ];
 
@@ -57,14 +69,22 @@ const Projects = () => {
       </h2>
 
       {/* Projects Grid */}
-      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:m-10 gap-6 sm:gap-8">
+      <motion.div  
+      ref={refLeft}
+       variants= {container(0.3)}
+       initial ="hidden"
+       animate={isLeftInView ? "visible" : "hidden"}
+       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:m-10 gap-6 sm:gap-8">
         {data.map((project) => (
           <div
             key={project.id}
             className="bg-white shadow-lg rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
           >
             {/* Project Image */}
-            <motion.div className="relative group">
+            <motion.div className="relative group"
+            variants= {container(0.8)}
+            initial ="hidden"
+            animate="visible">
               <motion.img
                 src={project.image}
                 alt={project.name}

@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const techIcons1 = [
   { src: "/css.png", alt: "CSS" },
@@ -25,36 +26,79 @@ const techIcons3 = [
 ];
 
 const Techstack = () => {
+  // Animation variants
+  const containerLeft = (delay) => ({
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: delay,
+      },
+    },
+  });
+
+  const containerRight = (delay) => ({
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: delay,
+      },
+    },
+  });
+
   const dragConstraints = { left: 0, right: 0, top: 0, bottom: 0 };
+
+  // Use refs for viewport animations
+  const refLeft = useRef(null);
+  const isLeftInView = useInView(refLeft);
+
+  const refRight = useRef(null);
+  // const isRightInView = useInView(refRight, { once: true });
+  const isRightInView = useInView(refRight);
+
 
   return (
     <div
-      className="text-white flex flex-col items-center py-10 min-h-screen"
+      className={`text-white flex flex-col items-center py-10 ${
+        window.innerWidth < 1024
+          ? "bg-gradient-to-b from-purple-600  to-purple-900 min-h-screen"
+          : "h-screen "
+      }max-h-[100vh] overflow-y-auto`}
       style={{
-        backgroundImage: `url('/group.svg')`,
+        backgroundImage: window.innerWidth >= 1024 ? `url('./Group.svg')` : "",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
+        height: "100vh",
+        width: "98.9vw",
       }}
     >
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-wide">
+        <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-wide">
           Tech Stack
         </h1>
-        <p className="mt-2 text-lg text-gray-300">
-          A comprehensive overview of the tools and technologies I work with:
+        <p className="mt-2 text-base sm:text-lg text-gray-300">
+          My expertise includes the following technologies:
         </p>
       </div>
 
-      {/* Tech Stack Grid */}
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 px-4 lg:px-20 w-full">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 lg:px-20 w-full">
         {/* Frontend & Frameworks */}
-        <div className=" uppercase bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
-          <h2 className=" tech text-xl font-bold mb-4 relative before:absolute before:content-[''] before:bg-primary before:h-1 before:w-16 before:rounded before:-top-3 before:left-1/2 before:-translate-x-1/2 text-center">
-            Frontend & Frameworks
-          </h2>
-          <div className="grid grid-cols-3 gap-4">
+        <motion.div
+          ref={refLeft}
+          className="flex flex-col items-center bg-white/20 backdrop-blur-lg rounded-3xl p-6 shadow-lg"
+          variants={containerLeft(0.3)}
+          initial="hidden"
+          animate={isLeftInView ? "visible" : "hidden"}
+        >
+          <h2 className="text-xl font-semibold mb-4">Frontend & Frameworks</h2>
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
             {techIcons1.map((icon, index) => (
               <motion.div
                 key={index}
@@ -67,20 +111,22 @@ const Techstack = () => {
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
+                  className="w-6 sm:w-20 h-6 sm:h-20 object-contain"
                 />
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Backend & Frameworks */}
-        <div className="backdrop-blur-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-center mb-4 uppercase tracking-wider">
-            <span className=" tech bg-black text-white px-2 py-1 rounded-md">
-              Backend & Frameworks
-            </span>
-          </h2>
+        <motion.div
+          ref={refRight}
+          className="flex flex-col items-center bg-white/20 backdrop-blur-lg rounded-3xl p-6 shadow-lg"
+          variants={containerRight(0.3)}
+          initial="hidden"
+          animate={isRightInView ? "visible" : "hidden"}
+        >
+          <h2 className="text-xl font-semibold mb-4">Backend & Frameworks</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {techIcons2.map((icon, index) => (
               <motion.div
@@ -94,18 +140,22 @@ const Techstack = () => {
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
+                  className="w-6 sm:w-20 h-6 sm:h-20 object-contain"
                 />
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Tools & Technologies */}
-        <div className="bg-gradient-to-r from-yellow-500 to-orange-600 rounded-3xl p-6 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all">
-          <h2 className=" uppercase tech text-xl font-light italic text-center mb-4">
-            Tools <span className="font-bold">&</span> Technologies
-          </h2>
+        <motion.div
+          ref={refRight}
+          className="flex flex-col items-center bg-white/20 backdrop-blur-lg rounded-3xl p-6 shadow-lg"
+          variants={containerRight(0.3)}
+          initial="hidden"
+          animate={isRightInView ? "visible" : "hidden"}
+        >
+          <h2 className="text-xl font-semibold mb-4">Tools & Technologies</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {techIcons3.map((icon, index) => (
               <motion.div
@@ -119,18 +169,18 @@ const Techstack = () => {
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-12 sm:w-16 h-12 sm:h-16 object-contain"
+                  className="w-6 sm:w-20 h-6 sm:h-20 object-contain"
                 />
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Footer Section */}
       <div className="mt-16 text-center">
         <p className="text-sm sm:text-lg text-gray-300">
-          Drag and interact with the icons & have fun exploring!
+          Drag and interact with the icons & be happy!
         </p>
       </div>
     </div>
