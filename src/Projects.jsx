@@ -19,7 +19,7 @@ const Projects = () => {
       id: "1",
       name: "FightClub",
       detail:
-        "Fight Club is a platform dedicated to the UFO and Freestyle Wrestling Academy named TITAN. Learn about happenings in sports and wrestling at TITAN, along with pricing and subscription plans.",
+        "FightClub is a dynamic platform dedicated to the world of combat sports and wrestling. Explore news, events, and updates from the Titan UFO and Freestyle Wrestling Academy. Stay connected with exclusive insights into training sessions, membership plans.",
       image: "fight5.svg",
       techstack: "#reactjs #tailwind #css #framer",
       github: "https://github.com/fieldmarcel/react-fightclub",
@@ -29,7 +29,7 @@ const Projects = () => {
       id: "2",
       name: "Ecommerce",
       detail:
-        "FitnessPro is a comprehensive fitness management platform that tracks your workouts, offers diet suggestions, and helps you stay motivated with progress charts and community support.",
+        "Ecommerce is a modern shopping platform offering a seamless online shopping experience. Browse a wide range of products, enjoy intuitive navigation, and benefit from secure payment options. Built to deliver exceptional user engagement.",
       image: "Group 1 (1).svg",
       techstack: "#reactjs #tailwind #api #nodejs",
       github: "https://github.com/fieldmarcel/ecommerce",
@@ -39,23 +39,23 @@ const Projects = () => {
       id: "3",
       name: "Portfolio App",
       detail:
-        "EcoLiving is a platform sharing sustainable living tips, DIY projects, and eco-friendly product recommendations to promote a greener lifestyle.",
+        "This is my professional showcase for creative and tech enthusiasm. It highlights my projects, skills, and experiences in a visually captivating and responsive design that leaves a lasting impression.",
       image: "G2.svg",
       techstack: "#tailwind #reactjs #framer",
       github: "https://github.com/fieldmarcel/Pexels--API",
       liveDemo: "https://ecoliving-demo.com",
     },
-
     {
       id: "4",
       name: "Recipeapp",
       detail:
-        "Recipe is a recipe aggregation platform delivering trending headlines, weather updates, and personalized content based on user preferences.",
+        "RecipeApp is a food lover's haven, providing an extensive collection of recipes from around the world. Discover, save, and share your favorite recipes with an intuitive interface and easy-to-follow instructions.",
       image: "Group 1 (2).svg",
       techstack: "#mernstack #api #tailwind #reactjs",
       github: "https://github.com/fieldmarcel/foodchef",
       liveDemo: "https://foodchef-pi.vercel.app/",
     },
+    
   ];
 
   return (

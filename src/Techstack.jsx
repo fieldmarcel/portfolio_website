@@ -64,20 +64,20 @@ const Techstack = () => {
 
   return (
     <div
-      className={`text-white flex flex-col items-center py-10 ${
-        window.innerWidth < 1024
-          ? "bg-gradient-to-b from-purple-600  to-purple-900 min-h-screen"
-          : "h-screen "
-      }max-h-[100vh] overflow-y-auto`}
-      style={{
-        backgroundImage: window.innerWidth >= 1024 ? `url('./Group.svg')` : "",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "bottom",
-        height: "100vh",
-        width: "98.9vw",
-      }}
-    >
+  className={`text-white flex flex-col items-center py-10 ${
+    window.innerWidth < 1024
+      ? "bg-gradient-to-b from-purple-600  to-purple-900 min-h-screen"
+      : "h-screen "
+  }max-h-[100vh] overflow-y-auto`}
+  style={{
+    backgroundImage: window.innerWidth >= 1024 ? `url('/Group.svg')` : "",  // Corrected path
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "bottom",
+    height: "100vh",
+    width: "98.9vw",
+  }}
+>
       {/* Header */}
       <div className="text-center">
         <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-wide">
