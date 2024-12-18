@@ -7,7 +7,6 @@ const techIcons1 = [
   { src: "/html.png", alt: "HTML" },
   { src: "/js.png", alt: "JavaScript" },
   { src: "/react.png", alt: "React" },
-  { src: "/node.png", alt: "Node.js" },
   { src: "/tcss.png", alt: "Tailwind CSS" },
 ];
 
@@ -15,6 +14,8 @@ const techIcons2 = [
   { src: "/mysql.png", alt: "MySQL" },
   { src: "/mongo.png", alt: "MongoDB" },
   { src: "/express.png", alt: "Express.js" },
+  { src: "/node.png", alt: "Node.js" },
+
   { src: "/boot.png", alt: "Bootstrap" },
 ];
 
@@ -87,6 +88,8 @@ const Techstack = () => {
           My expertise includes the following technologies:
         </p>
       </div>
+
+
 
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 lg:px-20 w-full">
         {/* Frontend & Frameworks */}

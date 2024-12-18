@@ -10,11 +10,14 @@ const Navlist = () => {
       {/* Navigation Links */}
       <nav className="list flex flex-col items-start space-y-6 sm:space-y-8 text-lg font-semibold tracking-wide mb-6">
         <Link
+        id="#home"
           to="/home"
           className="hover:text-purple-600 tracking-widest transition duration-200"
         >
           HOME
+
         </Link>
+
         <Link
           to="/blog"
           className="hover:text-purple-600 tracking-widest transition duration-200"
