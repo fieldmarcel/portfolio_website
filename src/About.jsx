@@ -33,7 +33,7 @@ const About = () => {
   const isRightInView = useInView(refRight); // Added ref for right column
 
   return (
-    <div
+    <div id="about"
       className="about flex flex-col md:flex-row gap-6 p-4 sm:p-6"
       style={{
         backgroundImage: `url('/Rectangle.svg')`,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -6,11 +6,11 @@ import { FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa6";
 import { motion, useInView } from "framer-motion";
-import  {useRef}  from "react";
-
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  // Animation variants
+  const formRef = useRef();
+
   const container = (delay) => ({
     hidden: { x: -100, opacity: 0 },
     visible: {
@@ -35,15 +35,33 @@ const Contact = () => {
     },
   });
 
-  // References for Framer Motion animations
   const refLeft = useRef(null);
   const isLeftInView = useInView(refLeft);
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_e0vm08i", 
+        "Shivanshu", 
+        formRef.current,
+        "H5YgUCUkSPhr1ilhj" 
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
-    <div
+    <div id="contact"
       className="flex flex-col items-center justify-center text-gray-800 p-8"
       style={{
-        background: "linear-gradient(0deg, #D690FF, #BB16F2)", // Background gradient
+        background: "linear-gradient(0deg, #D000FF, #BB16F2)", 
         minHeight: "100vh",
         overflow: "hidden",
       }}
@@ -52,21 +70,13 @@ const Contact = () => {
         Contact Me
       </div>
 
-      {/* Form and SVG Section */}
       <div className="flex flex-col lg:flex-row justify-center items-center w-full lg:gap-12 z-10">
-        {/* Form Section */}
-        <div
-         
-          className="w-full h-auto lg:w-1/2 max-w-md bg-white shadow-2xl rounded-3xl p-8"
-        >
+
+        <div className="w-full h-auto lg:w-1/2 max-w-md bg-white shadow-2xl rounded-3xl p-8">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
             Get in Touch
           </h2>
-          <form
-            action="https://formspree.io/f/mwpkezwq"
-            method="POST"
-            className="space-y-6"
-          >
+          <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
                 Full Name*
@@ -74,7 +84,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
                 placeholder="Enter your name..."
                 className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-md"
                 required
@@ -87,7 +97,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="user_email"
                 placeholder="Enter your email..."
                 className="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-md"
                 required
@@ -115,11 +125,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* SVG Section */}
-        <div
-         
-          className="hidden lg:block flex justify-center lg:w-1/2 mt-10 lg:mt-0"
-        >
+        <div className="hidden lg:block flex justify-center lg:w-1/2 mt-10 lg:mt-0">
           <img
             src="/beauty.svg"
             alt="Decorative Design"
@@ -141,49 +147,25 @@ const Contact = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-8 mb-10">
-          {[
-            {
-              href: "https://www.linkedin.com/in/shivanshu-tripathi-704a022b9/",
-              icon: <FaLinkedin />,
-              color: "text-blue-500",
-            },
-            {
-              href: "https://www.instagram.com/zz_shivanshu95/",
-              icon: <AiFillInstagram />,
-              color: "text-pink-600",
-            },
-            {
-              href: "https://x.com/T_shivanshu9590",
-              icon: <FaSquareXTwitter />,
-              color: "text-black",
-            },
-            {
-              href: "https://github.com/fieldmarcel",
-              icon: <FaGithubSquare />,
-              color: "text-gray-800",
-            },
-            {
-              href: "https://leetcode.com/u/Shivanshu-Tripathi/",
-              icon: <SiLeetcode />,
-              color: "text-yellow-500",
-            },
-            {
-              href: "https://www.youtube.com/@Shiva_Vox",
-              icon: <FaYoutube />,
-              color: "text-red-500",
-            },
-          ].map(({ href, icon, color }, index) => (
-            <a
-              key={index}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`transition-transform transform hover:scale-125 ${color} text-5xl`}
-              aria-label="Social Link"
-            >
-              {icon}
-            </a>
-          ))}
+          {/* Social Links */}
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-4xl text-blue-600 hover:text-blue-800 transition-colors" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <AiFillInstagram className="text-4xl text-pink-600 hover:text-pink-800 transition-colors" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <FaSquareXTwitter className="text-4xl text-gray-700 hover:text-black transition-colors" />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <FaGithubSquare className="text-4xl text-gray-700 hover:text-gray-900 transition-colors" />
+          </a>
+          <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer">
+            <SiLeetcode className="text-4xl text-orange-500 hover:text-orange-700 transition-colors" />
+          </a>
+          <a href="https://www.youtube.com/@Shiva_Vox" target="_blank" rel="noopener noreferrer">
+            <FaYoutube className="text-4xl text-red-600 hover:text-red-800 transition-colors" />
+          </a>
         </div>
 
         <a

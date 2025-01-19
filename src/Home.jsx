@@ -33,7 +33,7 @@ const Home = ({ isopen }) => {
   let data = ["/c.jpg", "/i3.jpg", "/ux.jpg", "/i2.jpg"];
 
   return (
-    <div className="flex flex-col mt-5 sm:mt-0 justify-center items-center h-screen p-6 bg-gradient-to-b from-gray-100 via-gray-300 to-gray-200">
+    <div id="home" className="flex flex-col mt-5 sm:mt-0 justify-center items-center h-screen p-6 bg-gradient-to-b from-gray-100 via-gray-300 to-gray-200">
       <div className="text-center space-y-4 transition-opacity duration-500">
         {/* First Row */}
         <motion.div

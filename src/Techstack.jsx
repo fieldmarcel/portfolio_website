@@ -64,7 +64,7 @@ const Techstack = () => {
 
 
   return (
-    <div
+    <div id="techstack"
   className={`text-white flex flex-col items-center py-10 ${
     window.innerWidth < 1024
       ? "bg-gradient-to-b from-purple-600  to-purple-900 min-h-screen"

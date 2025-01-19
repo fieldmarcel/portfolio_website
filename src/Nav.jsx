@@ -29,7 +29,10 @@ const Nav = ({ isopen, setisopen }) => {
     <div>
       <div className="flex flex-row justify-between items-center p-4 text-white">
         <div className="nav rounded-full flex justify-center sm:ml-10 items-center text-purple-800 sm:text-4xl text-xl sm:w-1/4 sm:h-14 h-10 p-2">
+          <button to="/home" className="hover:text-purple-600 tracking-widest transition duration-200">
           Shivanshu Tripathi
+
+          </button>
         </div>
         <div className="flex flex-row items-center">
           <Link

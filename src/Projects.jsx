@@ -59,7 +59,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col items-start inset-0 h-full w-full bg-[linear-gradient(to_right,#E3D8EA_1px,transparent_2px),linear-gradient(to_bottom,#E3D8EA_1px,transparent_1px)] bg-[size:6rem_4rem] p-6 sm:p-10"  >
+    <div id="projects" className="flex flex-col items-start inset-0 h-full w-full bg-[linear-gradient(to_right,#E3D8EA_1px,transparent_2px),linear-gradient(to_bottom,#E3D8EA_1px,transparent_1px)] bg-[size:6rem_4rem] p-6 sm:p-10"  >
       {/* Header */}
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-wider text-gray-800">
         <span className=" sm:ml-9 font-thin text-purple-600">|</span> Web Folio
