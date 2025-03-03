@@ -38,24 +38,24 @@ body {
     width: '100%';
 }
 .list{
-  font-family: Lato;
+  font-family: 'Lato';
  
   .list1{
     z-index: 999;
   }
 }
 h2{
-  font-family:  Allerta stencil
+  font-family:  'Allerta stencil';
 }
 h1{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 .tech{
   font-family:  'Trebuchet MS', sans-serif;
 
 }
 .font-heading {
-  font-family:bebas neue
+  font-family:'bebas neue'
 }
 
 .font-subheading {

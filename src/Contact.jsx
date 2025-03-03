@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaSquareXTwitter } from "react-icons/fa6";
+// import { FaSquareXTwitter } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-import { FaYoutube } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -154,9 +154,9 @@ const Contact = () => {
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
             <AiFillInstagram className="text-4xl text-pink-600 hover:text-pink-800 transition-colors" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FaSquareXTwitter className="text-4xl text-gray-700 hover:text-black transition-colors" />
-          </a>
+          </a> */}
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             <FaGithubSquare className="text-4xl text-gray-700 hover:text-gray-900 transition-colors" />
           </a>

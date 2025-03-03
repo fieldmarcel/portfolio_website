@@ -17,6 +17,16 @@ const Projects = () => {
   const data = [
     {
       id: "1",
+      name: "Food Recipe Web App",
+      detail:
+        "RecipeApp is a food lover's haven, providing an extensive collection of recipes from around the world. Post, bookmark, and share your favorite recipes with an intuitive interface and easy-to-follow instructions.",
+      image: "ff.svg",
+      techstack: "#mernstack #tailwind #reactjs #framer #shadcnUI" ,
+      github: "https://github.com/fieldmarcel/orgranic",
+      liveDemo: "https://shivanshutripathi.online/",
+    },
+    {
+      id: "2",
       name: "FightClub",
       detail:
         "FightClub is a dynamic platform dedicated to the world of combat sports and wrestling. Explore news, events, and updates from the Titan UFO and Freestyle Wrestling Academy. Stay connected with exclusive insights into training sessions, membership plans.",
@@ -25,16 +35,7 @@ const Projects = () => {
       github: "https://github.com/fieldmarcel/react-fightclub",
       liveDemo: "https://fightclub-nine.vercel.app/",
     },
-    {
-      id: "2",
-      name: "Ecommerce",
-      detail:
-        "Ecommerce is a modern shopping platform offering a seamless online shopping experience. Browse a wide range of products, enjoy intuitive navigation, and benefit from secure payment options. Built to deliver exceptional user engagement.",
-      image: "Group 1 (1).svg",
-      techstack: "#reactjs #tailwind #api #nodejs",
-      github: "https://github.com/fieldmarcel/ecommerce",
-      liveDemo: "https://ecommerce-xi-lovat.vercel.app",
-    },
+    
     {
       id: "3",
       name: "Portfolio App",
@@ -45,15 +46,16 @@ const Projects = () => {
       github: "https://github.com/fieldmarcel/Pexels--API",
       liveDemo: "https://ecoliving-demo.com",
     },
+   
     {
       id: "4",
-      name: "Recipeapp",
+      name: "Ecommerce",
       detail:
-        "RecipeApp is a food lover's haven, providing an extensive collection of recipes from around the world. Discover, save, and share your favorite recipes with an intuitive interface and easy-to-follow instructions.",
-      image: "Group 1 (2).svg",
-      techstack: "#mernstack #api #tailwind #reactjs",
-      github: "https://github.com/fieldmarcel/foodchef",
-      liveDemo: "https://foodchef-pi.vercel.app/",
+        "Ecommerce is a modern shopping platform offering a seamless online shopping experience. Browse a wide range of products, enjoy intuitive navigation, and benefit from secure payment options. Built to deliver exceptional user engagement.",
+      image: "Group 1 (1).svg",
+      techstack: "#reactjs #tailwind #api #nodejs",
+      github: "https://github.com/fieldmarcel/ecommerce",
+      liveDemo: "https://ecommerce-xi-lovat.vercel.app",
     },
     
   ];

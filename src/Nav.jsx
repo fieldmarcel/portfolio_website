@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { RxTextAlignRight, RxCross2 } from "react-icons/rx";
 import Navlist from "./Navlist";
-import { Link } from "react-router-dom";
-import { HiArrowUpRight } from "react-icons/hi2";
 
 const Nav = ({ isopen, setisopen }) => {
   const navRef = useRef(null); // Ref for the navigation container
@@ -35,19 +33,13 @@ const Nav = ({ isopen, setisopen }) => {
           </button>
         </div>
         <div className="flex flex-row items-center">
-          <Link
-            to="/blog"
-            className="flex items-center justify-between bg-black rounded-full overflow-hidden sm:ml-10 mx-1 sm:h-10 h-8"
-          >
-            {/* Text */}
-            <span className="text-white sm:text-xl px-2 text-md font-thin">
-              BLOG
-            </span>
-            {/* Icon */}
-            <div className="bg-white hover:bg-purple-500 hover:text-white flex items-center justify-center rounded-full sm:w-8 sm:h-8 w-6 h-6 mr-1">
-              <HiArrowUpRight className="text-black hover:text-white sm:text-lg text-sm" />
-            </div>
-          </Link>
+        <a
+          href="/resume.pdf"
+          download
+          className="px-7 py-3 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
+        >
+           RESUME
+        </a>
           <button
             type="button"
             onClick={handleNav}

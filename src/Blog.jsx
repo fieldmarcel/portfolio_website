@@ -2,13 +2,14 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="blog-section p-10">
-      <h1 className="text-4xl font-bold text-center mb-8 text-purple-600">
-        Blog Section Coming Soon
-      </h1>
-      <p className="text-lg text-gray-700 text-center">
-        Stay tuned for insightful articles and updates.
-      </p>
+    <div className="p-10 flex justify-center">
+      <a
+        href="/resume.pdf"
+        download
+        className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
+      >
+        Download Resume
+      </a>
     </div>
   );
 };
