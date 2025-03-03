@@ -8,6 +8,9 @@ const techIcons1 = [
   { src: "/js.png", alt: "JavaScript" },
   { src: "/react.png", alt: "React" },
   { src: "/tcss.png", alt: "Tailwind CSS" },
+  { src: "/boot.png", alt: "Bootstrap" },
+  
+
 ];
 
 const techIcons2 = [
@@ -16,7 +19,6 @@ const techIcons2 = [
   { src: "/express.png", alt: "Express.js" },
   { src: "/node.png", alt: "Node.js" },
 
-  { src: "/boot.png", alt: "Bootstrap" },
 ];
 
 const techIcons3 = [
@@ -81,12 +83,13 @@ const Techstack = () => {
 >
       {/* Header */}
       <div className="text-center">
-        <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-wide">
-          Tech Stack
-        </h1>
-        <p className="mt-2 text-base sm:text-lg text-gray-300">
-          My expertise includes the following technologies:
-        </p>
+      <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-wide text-white">
+  Tech Stack
+</h1>
+<p className="mt-2 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
+  My expertise includes the following technologies:
+</p>
+
       </div>
 
 

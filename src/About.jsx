@@ -84,7 +84,7 @@ const About = () => {
         <ul className="text-body  text-sm sm:text-base text-center sm:mb-6 mb-3 list-disc ml-2">
           <li>Proficient in Full-Stack Development</li>
           <li>Experience with MERN stack projects</li>
-          <li>Created 10+ dynamic, user-focused applications</li>
+          <li>Created a no. of dynamic & user-focused applications</li>
           <li>Skilled in C++, JavaScript, React, and Node.js</li>
         </ul>
         <div className="w-48 sm:w-64 h-48 sm:h-64">
@@ -96,7 +96,6 @@ const About = () => {
         </div>
       </motion.div>
 
-      {/* Right Column */}
       <motion.div
         ref={refRight}
         variants={container1(0.4)} // Use the same container1 variant as left column
@@ -110,22 +109,7 @@ const About = () => {
             alt="Professional Image"
             className="w-full h-full object-cover object-top rounded-2xl"
           />
-          <a
-            href="#"
-            className="absolute top-2 right-2 flex items-center justify-center w-8 sm:w-10 h-8 sm:h-10 bg-white rounded-full shadow-lg hover:bg-gray-200 transition-all"
-            title="View More"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 sm:w-6 h-5 sm:h-6 text-primary"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+         
         </div>
         <div className="flex items-start space-x-3">
           <div className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full">

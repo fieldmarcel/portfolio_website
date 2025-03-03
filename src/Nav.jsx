@@ -36,14 +36,14 @@ const Nav = ({ isopen, setisopen }) => {
         <a
           href="/resume.pdf"
           download
-          className="px-7 py-3 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
+          className="px-7 py-2 bg-black text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
         >
            RESUME
         </a>
           <button
             type="button"
             onClick={handleNav}
-            className="bg-white sm:mr-32 rounded-full flex justify-center items-center text-gray-700 sm:w-16 sm:h-14 p-2"
+            className="bg-gray-300 sm:mr-32 rounded-full flex justify-center items-center text-gray-700 sm:w-16 sm:h-14 p-2"
           >
             {isopen ? <RxCross2 size={24} /> : <RxTextAlignRight size={24} />}
           </button>
