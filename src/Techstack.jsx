@@ -87,7 +87,7 @@ const Techstack = () => {
   Tech Stack
 </h1>
 <p className="mt-2 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
-  My expertise includes the following technologies:
+  My expertise include the following technologies:
 </p>
 
       </div>
