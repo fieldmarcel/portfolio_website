@@ -23,6 +23,12 @@ body {
   font-family:outfit;
 
 }
+.techstack{
+  background: radial-gradient(circle, #f5f5f5 90%, #f5f5f5 40%);
+  background-size: cover;
+  font-family:outfit;
+  border-radius: 30px;
+}
 .nav{
    
     font-family: "Vibes", system-ui;

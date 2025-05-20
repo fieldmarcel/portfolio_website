@@ -9,7 +9,9 @@ const techIcons1 = [
   { src: "/react.png", alt: "React" },
   { src: "/tcss.png", alt: "Tailwind CSS" },
   { src: "/boot.png", alt: "Bootstrap" },
-  
+  { src: "/download (3).jpg", alt: "Redux" },
+  { src: "/download (4).png", alt: "Next.js" },
+  { src: "/download (5).png", alt: "TypeScript" },
 
 ];
 
@@ -18,14 +20,17 @@ const techIcons2 = [
   { src: "/mongo.png", alt: "MongoDB" },
   { src: "/express.png", alt: "Express.js" },
   { src: "/node.png", alt: "Node.js" },
+{ src: "/download (3).png", alt: "Firebase" },
 
 ];
 
 const techIcons3 = [
   { src: "/git.png", alt: "Git" },
   { src: "/github.png", alt: "GitHub" },
-  { src: "/postman.png", alt: "Postman" },
+  // { src: "/postman.png", alt: "Postman" },
   { src: "/vs.png", alt: "VS Code" },
+    { src: "/download (2).jpg", alt: "Figma" },
+
 ];
 
 const Techstack = () => {
@@ -83,7 +88,7 @@ const Techstack = () => {
 >
       {/* Header */}
       <div className="text-center">
-      <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold tracking-wide text-white">
+      <h1 className=" techstack mt-2 text-4xl sm:text-6xl  font-thin tracking-wide text-zinc-800">
   Tech Stack
 </h1>
 <p className="mt-2 text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">

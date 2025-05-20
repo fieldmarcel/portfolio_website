@@ -57,7 +57,8 @@ const Home = ({ isopen }) => {
           ></img>
         </motion.div>
 
-        {/* Second Row (Image Carousel) */}
+
+{/* //image carousal */}
         <motion.div
           className="flex flex-row items-center justify-center sm:space-x-6 space-x-6 text-2xl sm:text-4xl font-subheading text-secondary"
           variants={container(1)}
@@ -121,7 +122,7 @@ const Home = ({ isopen }) => {
           initial="hidden"
           animate="visible"
         >
-          I have been developing web apps since 1 year as well as working on <br/>useful and mindful products
+          I have been developing web apps since 1.5 years as well as working on <br/>useful and mindful products
           
         </motion.p>
 
