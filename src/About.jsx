@@ -56,7 +56,7 @@ const About = () => {
         <p className="text-body text-sm sm:text-md sm:leading-7 leading-5 sm:mb-6">
           Hello! I am{" "}
           <span className="font-bold text-primary">Shivanshu Tripathi</span>, a
-          third-year Bachelor of Technology student from India, pursuing
+          final-year Bachelor of Technology student from India, pursuing
           Electronics and Communications Engineering at IIITDM Kurnool. As a
           passionate <span className="font-bold">Full-Stack Developer</span>, I
           enjoy working on both the front-end and back-end aspects of web

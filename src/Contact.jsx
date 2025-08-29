@@ -61,7 +61,7 @@ const Contact = () => {
     <div id="contact"
       className="flex flex-col items-center justify-center text-gray-800 p-8"
       style={{
-        background: "linear-gradient(0deg, #D000FF, #BB16F2)", 
+        background: "linear-gradient(0deg, #8400E3, #8400c4)", 
         minHeight: "100vh",
         overflow: "hidden",
       }}
@@ -169,7 +169,7 @@ const Contact = () => {
         </div>
 
         <a
-          href="/updated_CV.pdf"
+          href="/Shivanshu_Resume.pdf"
           download
           className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
         >
