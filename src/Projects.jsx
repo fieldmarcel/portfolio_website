@@ -15,50 +15,48 @@ const Projects = () => {
     const refLeft = useRef(null);
     const isLeftInView = useInView(refLeft);
   const data = [
-    {
-      id: "1",
-      name: "Food Recipe Web App",
-      detail:
-        "RecipeApp is a food lover's haven, providing an extensive collection of recipes from around the world. Post, bookmark, and share your favorite recipes with an intuitive interface and easy-to-follow instructions.",
-      image: "ff.svg",
-      techstack: "#mernstack #tailwind #reactjs #framer #shadcnUI" ,
-      github: "https://github.com/fieldmarcel/orgranic",
-      liveDemo: "https://shivanshutripathi.online/",
-    },
-    {
-      id: "2",
-      name: "FightClub",
-      detail:
-        "FightClub is a dynamic platform dedicated to the world of combat sports and wrestling. Explore news, events, and updates from the Titan UFO and Freestyle Wrestling Academy. Stay connected with exclusive insights into training sessions, membership plans.",
-      image: "fight5.svg",
-      techstack: "#reactjs #tailwind #css #framer",
-      github: "https://github.com/fieldmarcel/react-fightclub",
-      liveDemo: "https://fightclub-nine.vercel.app/",
-    },
-    
-    {
-      id: "3",
-      name: "Portfolio App",
-      detail:
-        "This is my professional showcase for creative and tech enthusiasm. It highlights my projects, skills, and experiences in a visually captivating and responsive design that leaves a lasting impression.",
-      image: "G2.svg",
-      techstack: "#tailwind #reactjs #framer",
-      github: "https://github.com/fieldmarcel/Pexels--API",
-      liveDemo: "https://ecoliving-demo.com",
-    },
-   
-    {
-      id: "4",
-      name: "Ecommerce",
-      detail:
-        "Ecommerce is a modern shopping platform offering a seamless online shopping experience. Browse a wide range of products, enjoy intuitive navigation, and benefit from secure payment options. Built to deliver exceptional user engagement.",
-      image: "Group 1 (1).svg",
-      techstack: "#reactjs #tailwind #api #nodejs",
-      github: "https://github.com/fieldmarcel/ecommerce",
-      liveDemo: "https://ecommerce-xi-lovat.vercel.app",
-    },
-    
-  ];
+  {
+    id: "1",
+    name: "Organic Food Recipe Web App",
+    detail:
+      "Organic is a full-stack recipe platform for food lovers. Discover, post, bookmark, and share recipes from around the world with an intuitive interface and seamless user experience.",
+    image: "ff.svg",
+    techstack: "#mernstack #tailwind #reactjs #framer #shadcnUI",
+    github: "https://github.com/fieldmarcel/New_Organic",
+    liveDemo: "https://neworganic1.netlify.app/",
+  },
+  {
+    id: "2",
+    name: "AI Mock Interview Web App",
+    detail:
+      "An AI-powered platform that simulates real interview scenarios. Users can practice technical and behavioral questions, get instant feedback, and track performance to improve interview readiness.",
+    image: "interview.svg",
+    techstack: "#mernstack #tailwind #reactjs #nodejs #firebase",
+    github: "https://github.com/fieldmarcel/ai-mock-interview",
+    liveDemo: "https://ai-mock-interviewer-6ec91.web.app/",
+  },
+  {
+    id: "3",
+    name: "FightClub",
+    detail:
+      "FightClub is a dynamic platform dedicated to the world of combat sports and wrestling. Explore news, events, and updates from the Titan UFO and Freestyle Wrestling Academy. Stay connected with exclusive insights into training sessions and membership plans.",
+    image: "fight5.svg",
+    techstack: "#reactjs #tailwind #css #framer",
+    github: "https://github.com/fieldmarcel/react-fightclub",
+    liveDemo: "https://fightclub-nine.vercel.app/",
+  },  
+  {
+    id: "4",
+    name: "Ecommerce",
+    detail:
+      "Ecommerce is a modern shopping platform offering a seamless online shopping experience. Browse a wide range of products, enjoy intuitive navigation, and benefit from secure payment options. Built to deliver exceptional user engagement.",
+    image: "Group 1 (1).svg",
+    techstack: "#reactjs #tailwind #api #nodejs",
+    github: "https://github.com/fieldmarcel/ecommerce",
+    liveDemo: "https://ecommerce-xi-lovat.vercel.app",
+  },
+];
+
 
   return (
     <div id="projects" className="flex flex-col items-start inset-0 h-full w-full bg-[linear-gradient(to_right,#E3D8EA_1px,transparent_2px),linear-gradient(to_bottom,#E3D8EA_1px,transparent_1px)] bg-[size:6rem_4rem] p-6 sm:p-10"  >

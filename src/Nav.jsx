@@ -34,7 +34,7 @@ const Nav = ({ isopen, setisopen }) => {
         </div>
         <div className="flex flex-row items-center">
         <a
-          href="/updated_CV.pdf"
+          href="/Shivanshu_Resume.pdf"
           download
           className="px-7 py-2 bg-black text-white text-lg font-bold rounded-full shadow-lg hover:scale-105 transition-transform"
         >
