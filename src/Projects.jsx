@@ -30,7 +30,7 @@ const Projects = () => {
     name: "AI Mock Interview Web App",
     detail:
       "An AI-powered platform that simulates real interview scenarios. Users can practice technical and behavioral questions, get instant feedback, and track performance to improve interview readiness.",
-    image: "interview.svg",
+    image: "Group 2 (6).svg",
     techstack: "#mernstack #tailwind #reactjs #nodejs #firebase",
     github: "https://github.com/fieldmarcel/ai-mock-interview",
     liveDemo: "https://ai-mock-interviewer-6ec91.web.app/",

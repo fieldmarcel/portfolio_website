@@ -45,7 +45,7 @@ const Home = ({ isopen }) => {
           <h2 className="text-2xl sm:text-4xl uppercase sm:translate-y-2 tracking-wide">
             I'm
           </h2>
-          <h1 className="text-3xl sm:text-6xl italic font-semibold text-primary uppercase tracking-wide">
+          <h1 className="text-3xl  sm:text-6xl italic font-semibold  text-violet-800 uppercase tracking-wide">
             Shivanshu
           </h1>
           <img
