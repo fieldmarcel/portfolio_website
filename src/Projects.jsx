@@ -31,7 +31,7 @@ const Projects = () => {
     detail:
       "An AI-powered platform that simulates real interview scenarios. Users can practice technical and behavioral questions, get instant feedback, and track performance to improve interview readiness.",
     image: "Group 2 (6).svg",
-    techstack: "#mernstack #tailwind #reactjs #nodejs #firebase",
+    techstack: "#mernstack #tailwind #reactjs #nodejs #firebase #geminiAI",
     github: "https://github.com/fieldmarcel/ai-mock-interview",
     liveDemo: "https://ai-mock-interviewer-6ec91.web.app/",
   },
